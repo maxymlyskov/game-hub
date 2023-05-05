@@ -3,15 +3,19 @@ import { BsChevronDown } from "react-icons/bs";
 import usePlatforms, { Platform } from "../hooks/usePlatforms";
 
 interface Props {
-  selectedPlatform: Platform | null;
+  selectedPlatformId?: number;
   onSelectedPlatforms: (platform: Platform | null) => void;
 }
 
 const PlatformsSelector = ({
-  selectedPlatform,
+  selectedPlatformId,
   onSelectedPlatforms,
 }: Props) => {
   const { data, error } = usePlatforms();
+
+  const selectedPlatform = data?.results.find(
+    (platform) => selectedPlatformId === platform.id
+  );
 
   if (error) return null;
 

@@ -11,11 +11,11 @@ import {
 import useGenres, { Genre } from "../hooks/useGenres";
 
 interface Props {
-  selectedGenre: Genre | null;
+  selectedGenreId: number;
   onSelectedGenre: (genre: Genre) => void;
 }
 
-const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
+const GenreList = ({ selectedGenreId, onSelectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
 
   if (error) return null;
@@ -38,7 +38,7 @@ const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
                 objectFit="cover"
               />
               <Button
-                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                fontWeight={genre.id === selectedGenreId ? "bold" : "normal"}
                 onClick={() => onSelectedGenre(genre)}
                 variant="link"
                 whiteSpace="normal"
