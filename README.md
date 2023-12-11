@@ -1,3 +1,17 @@
+### Technologies Used
+
+- [React](https://reactjs.org/)
+  - A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/)
+  - A superset of JavaScript that adds static types.
+- [Chakra UI](https://chakra-ui.com/)
+  - A simple, modular, and accessible component library for React.
+- [React Query](https://react-query.tanstack.com/)
+  - A library for managing, caching, and synchronizing server state in React applications.
+- [Axios](https://axios-http.com/)
+  - A promise-based HTTP client for the browser and Node.js.
+
+
 ### The website link:
 https://game-ario.vercel.app/
 
